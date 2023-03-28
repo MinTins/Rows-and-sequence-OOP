@@ -1,3 +1,10 @@
+/*
+* Group: K-23               *
+* Name: Flakey Roman        *
+* Lab-1: Rows and sequences *
+*/
+
+
 #include <iostream>
 #include "RowsMethod.h"
 #include <Windows.h>
@@ -6,7 +13,9 @@
 int main() {
     SetConsoleOutputCP(1251);
     RowsMethod rm;
-    char choice[2];
+    char choice[3];
+
+    std::cout << "****[ К-23 Флакей Роман | ООП | Лаб1 ]****\n";
 
     std::cout << "1. Пошук точного підрядка в рядку\n";
     std::cout << "2. Нечіткий пошук (близькі за відстанню, алгоритм Ландау-Вішкіна)\n";
@@ -24,8 +33,9 @@ int main() {
         std::cout << "\nВведіть номер методу (1-10) або q для виходу: ";
         std::cin >> choice;
 
-        if (choice[0] == 'q')
+        if (choice[0] == 'q') {
             break;
+        }
 
         int method = atoi(choice);
 
@@ -202,7 +212,7 @@ int main() {
             }
             }
         }
-        else if (option == 2) {            
+        else if (option == 2) {
             // Введення параметрів користувача
             switch (method) {
             case 1: {
@@ -368,10 +378,9 @@ int main() {
             }
             }
         }
-    else {
-    std::cout << "Неправильний вибір!\n";
+        else {
+            std::cout << "Неправильний вибір!\n";
         }
     }
-
     return 0;
 }
