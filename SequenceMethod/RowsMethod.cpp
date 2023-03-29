@@ -71,6 +71,8 @@ bool RowsMethod::isSubsequence(const std::string& text, const std::string& patte
         if (text[i] == pattern[j])
             j++;
 
+    // return j;
+
     return (j == m);
 }
 
